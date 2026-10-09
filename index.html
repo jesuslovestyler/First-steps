@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="A gentle, Scripture-rooted guide for the first days of following Jesus." />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>First Steps for New Believers</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --sky-top: #fff5df; --sky-mid: #ffd79c; --sky-low: #f4a968; --sun: #fff5ba;
+        --hill-far: #a5b983; --hill-near: #466f59; --page: #fffdf7; --paper-warm: #fff3dd;
+        --ink: #22342d; --muted: #52665c; --line: #d8ccb4; --gold: #a35c20; --gold-soft: #f1c47d;
+        --green: #285c44; --quote: #f6ead5; --shadow: rgba(73, 51, 29, 0.12);
+        --serif: "Alegreya", Georgia, serif; --sans: "Nunito Sans", "Trebuchet MS", sans-serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --sky-top: #1d3440; --sky-mid: #8e5f50; --sky-low: #d08a55; --sun: #ffd998;
+          --hill-far: #536c61; --hill-near: #1d4538; --page: #14241f; --paper-warm: #293a30;
+          --ink: #f7eedb; --muted: #c7d2c9; --line: #526158; --gold: #f2b66d; --gold-soft: #9c6d3e;
+          --green: #b7d6c4; --quote: #2c3c33; --shadow: rgba(0, 0, 0, 0.3);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+      a { color: inherit; }
+      .hero { position: relative; min-height: min(700px, 84vh); overflow: hidden; display: grid; place-items: center; padding: 72px 22px 170px; background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 58%, var(--sky-low) 100%); isolation: isolate; }
+      .sun { position: absolute; width: clamp(180px, 30vw, 340px); aspect-ratio: 1; border-radius: 50%; left: 50%; bottom: 76px; transform: translateX(-50%); background: var(--sun); box-shadow: 0 0 80px 28px color-mix(in srgb, var(--sun) 62%, transparent); z-index: -3; }
+      .rays { position: absolute; inset: auto 50% 65px auto; width: min(780px, 118vw); aspect-ratio: 1; transform: translateX(50%); opacity: 0.2; z-index: -4; background: repeating-conic-gradient(from 4deg, transparent 0 8deg, var(--sun) 8deg 12deg, transparent 12deg 27deg); mask-image: radial-gradient(circle, transparent 0 21%, #000 54%, transparent 72%); }
+      .hill { position: absolute; left: -8%; width: 116%; border-radius: 50% 50% 0 0 / 100% 100% 0 0; transform-origin: center bottom; z-index: -1; }
+      .hill.far { height: 160px; bottom: -78px; background: var(--hill-far); transform: rotate(-2deg); }
+      .hill.near { width: 130%; left: -15%; height: 170px; bottom: -108px; background: var(--hill-near); transform: rotate(3deg); }
+      .hero-copy { width: min(760px, 100%); text-align: center; }
+      .welcome { margin: 0 0 14px; color: var(--green); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+      h1 { margin: 0 auto 22px; max-width: 720px; font-family: var(--serif); font-size: clamp(3rem, 8.2vw, 5.8rem); font-weight: 600; line-height: 0.98; letter-spacing: -0.035em; }
+      .hero-copy > p:last-of-type { width: min(570px, 100%); margin: 0 auto; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.65; }
+      .begin-link { display: inline-flex; align-items: center; gap: 9px; margin-top: 30px; padding: 10px 16px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 45%, transparent); text-decoration: none; color: var(--ink); font-weight: 700; }
+      .begin-link svg { width: 18px; height: 18px; }
+      .intro { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 70px 0 42px; text-align: center; }
+      .intro p { max-width: 650px; margin: 0 auto; font-family: var(--serif); font-size: clamp(1.4rem, 3.2vw, 1.8rem); line-height: 1.5; }
+      .steps { position: relative; width: min(960px, calc(100% - 40px)); margin: 0 auto; padding: 28px 0 56px; }
+      .steps::before { content: ""; position: absolute; left: 35px; top: 40px; bottom: 88px; width: 1px; background: linear-gradient(var(--gold-soft), var(--line) 88%, transparent); }
+      .step { position: relative; display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 28px; margin-bottom: 58px; }
+      .step:last-child { margin-bottom: 0; }
+      .number { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50%; background: var(--page); border: 1px solid var(--gold-soft); color: var(--gold); font-family: var(--serif); font-size: 1.5rem; font-weight: 600; box-shadow: 0 6px 20px var(--shadow); z-index: 1; }
+      .step-body { padding: 2px 0 0; }
+      h2 { margin: 0 0 4px; font-family: var(--serif); font-size: clamp(2rem, 4.6vw, 2.8rem); line-height: 1.15; font-weight: 600; letter-spacing: -0.015em; }
+      .step-lede { margin: 0 0 18px; color: var(--gold); font-weight: 700; }
+      .step-body > p:not(.step-lede) { max-width: 680px; margin: 0 0 20px; color: var(--muted); }
+      blockquote { position: relative; max-width: 720px; margin: 22px 0 0; padding: 22px 26px 20px; background: var(--quote); border-radius: 5px 22px 22px 22px; font-family: var(--serif); font-size: 1.18rem; line-height: 1.55; }
+      blockquote p { margin: 0; }
+      cite { display: block; margin-top: 11px; color: var(--green); font-family: var(--sans); font-size: 0.82rem; font-style: normal; font-weight: 700; letter-spacing: 0.025em; }
+      cite a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      .pair { display: grid; gap: 12px; }
+      .pair blockquote { margin-top: 0; }
+      .closing { margin-top: 12px; padding: 82px 24px 90px; background: var(--paper-warm); text-align: center; }
+      .closing-inner { width: min(700px, 100%); margin: 0 auto; }
+      .closing .small-sun { width: 44px; height: 44px; margin: 0 auto 20px; border-radius: 50%; background: var(--gold-soft); box-shadow: 0 0 0 10px color-mix(in srgb, var(--gold-soft) 24%, transparent); }
+      .closing h2 { font-size: clamp(2.1rem, 5vw, 3rem); }
+      .closing p { margin: 16px auto 0; max-width: 610px; color: var(--muted); }
+      .closing strong { color: var(--ink); }
+      .translation { margin-top: 38px !important; font-size: 0.8rem; }
+      @media (max-width: 620px) {
+        body { font-size: 16px; }
+        .hero { min-height: 660px; padding: 68px 22px 164px; }
+        .hero-copy { text-align: left; }
+        h1 { font-size: clamp(3.2rem, 16vw, 4.5rem); }
+        .hero-copy > p:last-of-type { margin-left: 0; }
+        .begin-link { margin-top: 24px; padding-left: 0; }
+        .intro { width: calc(100% - 42px); text-align: left; padding-top: 52px; }
+        .steps { width: calc(100% - 34px); padding-top: 16px; }
+        .steps::before { left: 22px; top: 28px; bottom: 70px; }
+        .step { grid-template-columns: 46px minmax(0, 1fr); gap: 15px; margin-bottom: 46px; }
+        .number { width: 46px; height: 46px; font-size: 1.05rem; }
+        .step-body { padding-top: 3px; }
+        h2 { font-size: 2rem; }
+        .step-lede { line-height: 1.45; margin-top: 5px; }
+        blockquote { margin-left: -61px; padding: 20px 20px 18px; font-size: 1.08rem; }
+        .pair { margin-left: -61px; }
+        .pair blockquote { margin-left: 0; }
+        .closing { padding: 66px 22px 72px; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      @media print { .hero { min-height: auto; padding-bottom: 80px; } .begin-link, .sun, .rays, .hill { display: none; } .step { break-inside: avoid; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="rays" aria-hidden="true"></div><div class="sun" aria-hidden="true"></div><div class="hill far" aria-hidden="true"></div><div class="hill near" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="welcome">Welcome home</p>
+          <h1>Your new life with Jesus has begun.</h1>
+          <p>You do not have to know everything today. Following Jesus is a life of learning to know Him, trust Him, and walk with Him—one day at a time.</p>
+          <a class="begin-link" href="#first-step">Begin gently <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 4v15m0 0-6-6m6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </header>
+      <section class="intro" aria-label="Introduction"><p>These are not boxes to rush through. They are simple ways to grow close to the One who saved you. Take your time. Jesus is patient, and He is with you.</p></section>
+      <section class="steps" aria-label="Six first steps">
+        <article class="step" id="first-step"><div class="number" aria-hidden="true">01</div><div class="step-body">
+          <h2>You are a new creation</h2><p class="step-lede">What just happened to you</p>
+          <p>When you trusted in Jesus, you were brought into a real relationship with Him. Your past no longer has the final word over you. You belong to Christ now, and He is making you new. Growth takes time, but your new life has already begun.</p>
+          <blockquote><p>“Therefore if anyone is in Christ, he is a new creation. The old things have passed away. Behold, all things have become new.”</p><cite><a href="https://www.Biblegateway.com/passage/?search=2+Corinthians+5%3A17-19&amp;version=WEB" target="_blank" rel="noopener noreferrer">2 Corinthians 5:17</a></cite></blockquote>
+        </div></article>
+        <article class="step"><div class="number" aria-hidden="true">02</div><div class="step-body">
+          <h2>Start reading</h2><p class="step-lede">Begin in the Gospel of John</p>
+          <p>John’s Gospel will help you meet Jesus in the pages of Scripture—what He said, what He did, and who He is. Read a little each day, even if it is only a few verses. Before you begin, ask God to help you understand. You do not need to hurry.</p>
+          <blockquote><p>“Your word is a lamp to my feet, and a light for my path.”</p><cite><a href="https://www.biblegateway.com/passage/?search=Psalm+119%3A103-105&amp;version=WEB" target="_blank" rel="noopener noreferrer">Psalm 119:105</a></cite></blockquote>
+        </div></article>
+        <article class="step"><div class="number" aria-hidden="true">03</div><div class="step-body">
+          <h2>Talk to Him</h2><p class="step-lede">Prayer can be simple and honest</p>
+          <p>Speak to Jesus as if He is right there in the room—because He hears you. Tell Him what you are thankful for, what worries you, what you need, and where you need help. You do not need special words. Be honest, and keep coming to Him.</p>
+          <blockquote><p>“In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.”</p><cite><a href="https://www.biblegateway.com/passage/?search=Philippians+4%3A6&amp;version=WEB%3BNIV" target="_blank" rel="noopener noreferrer">Philippians 4:6</a></cite></blockquote>
+        </div></article>
+        <article class="step"><div class="number" aria-hidden="true">04</div><div class="step-body">
+          <h2>Be baptized</h2><p class="step-lede">Your first public step of obedience</p>
+          <p>Baptism is the way Jesus gave believers to openly identify with Him. It does not earn God’s love; it is a joyful picture that your old life is gone and your new life belongs to Jesus. If you have not been baptized since believing, talk with a trusted local church about taking this step.</p>
+          <div class="pair">
+            <blockquote><p>“Peter said to them, ‘Repent and be baptized, every one of you, in the name of Jesus Christ for the forgiveness of sins, and you will receive the gift of the Holy Spirit.’”</p><cite><a href="https://www.biblegateway.com/passage/?search=Acts+2%3A38%2CRomans+10%3A10%2CPhilippians+3%3A8-15&amp;version=WEB%3BNET%3BKJV" target="_blank" rel="noopener noreferrer">Acts 2:38</a></cite></blockquote>
+            <blockquote><p>“Go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit,”</p><cite><a href="https://www.biblegateway.com/passage/?search=Matthew%2028%3A19-20&amp;version=WEB;NET;NKJV" target="_blank" rel="noopener noreferrer">Matthew 28:19</a></cite></blockquote>
+          </div>
+        </div></article>
+        <article class="step"><div class="number" aria-hidden="true">05</div><div class="step-body">
+          <h2>Find a church family</h2><p class="step-lede">You were never meant to walk alone</p>
+          <p>Look for a church that teaches the Bible faithfully, centers everything on Jesus, and helps people love one another. It is okay to visit, ask questions, and take time to find a healthy church. Let other believers know you, pray with you, and help you grow.</p>
+          <blockquote><p>“Not forsaking our own assembling together, as the custom of some is, but exhorting one another, and so much the more as you see the Day approaching.”</p><cite><a href="https://www.biblegateway.com/passage/?search=Hebrews%2010%3A25&amp;version=WEB;NIV;KJV" target="_blank" rel="noopener noreferrer">Hebrews 10:25</a></cite></blockquote>
+        </div></article>
+        <article class="step"><div class="number" aria-hidden="true">06</div><div class="step-body">
+          <h2>Tell someone</h2><p class="step-lede">Share what Jesus has done for you</p>
+          <p>You do not need a polished speech. Simply tell someone you trust that you have put your faith in Jesus. Share what brought you to Him and what this new beginning means to you. Your honest story may become a doorway of hope for someone else.</p>
+          <blockquote><p>“He didn’t allow him, but said to him, ‘Go to your house, to your friends, and tell them what great things the Lord has done for you and how he had mercy on you.’”</p><cite><a href="https://eBible.org/engwebp/MRK05.htm" target="_blank" rel="noopener noreferrer">Mark 5:19</a></cite></blockquote>
+        </div></article>
+      </section>
+      <footer class="closing"><div class="closing-inner"><div class="small-sun" aria-hidden="true"></div><h2>One day at a time.</h2><p>You will have questions. You will still need grace. None of that surprises Jesus. <strong>Keep coming to Him.</strong> He is faithful, He loves you, and He will not abandon the work He has begun in you.</p><p class="translation">Scripture quotations are from the World English Bible (WEB), a public-domain translation.</p></div></footer>
+    </main>
+  </body>
+</html>
