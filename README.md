@@ -1,16 +1,8 @@
-# First Steps for New Believers
+# First Steps in Following Jesus
 
-A warm, welcoming first-steps guide for someone who has just given their life to Jesus.
+First steps for a new believer: what Jesus has done for you, and what comes next — prayer, the Bible, baptism, and fellowship with other Christians. Plain, warm, and free.
 
-## What's inside
+**Live:** https://jesuslovestyler.github.io/First-steps/
+**Home:** https://jesuslovestyler.com/
 
-- **You are a new creation** — what just happened to you (2 Corinthians 5:17)
-- **Start reading** — begin in the Gospel of John, a little each day (Psalm 119:105)
-- **Talk to Him** — prayer is simply speaking to Jesus (Philippians 4:6)
-- **Be baptized** — the first step of obedience (Acts 2:38)
-- **Find a church family** — don't walk alone (Hebrews 10:25)
-- **Tell someone** — share what Jesus did for you (Mark 5:19)
-
-Scripture quotations are from the World English Bible (public domain).
-
-Built with Muse artifacts.
+Scripture is quoted from the World English Bible, a public-domain translation. Released into the public domain (Unlicense — see LICENSE). Built by Tyler with Noki.
